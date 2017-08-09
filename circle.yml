@@ -16,5 +16,5 @@ deployment:
     branch: master
     commands:
       - pristat build
-      - firebase deploy
+      - firebase deploy --token "$FIREBASE_TOKEN"
 

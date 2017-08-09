@@ -1,0 +1,26 @@
+extends default
+
+block content
+    #home
+        #background(style=`background: url(${background_image.url}) no-repeat center center fixed`)
+        #content
+            #main
+                br
+                br
+                h1=center_stage
+                #description!=description
+            #links
+                each link in links
+                    a.link(href=link.link_url.url)
+                        img.link-image(src=link.link_image.url)
+                        p=link.link_text
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script.
+        var $home = $('#home');
+        var $links = $('.link');
+        var activeClass = 'link-active';
+        $links.hover(function(){
+            $home.addClass(activeClass);
+        }, function(){
+            $home.removeClass(activeClass);
+        });

@@ -19,5 +19,6 @@ jobs:
     steps:
       - checkout
       - run: sudo npm install -g pristat firebase-tools
-      - run: pristat build
+#      - run: pristat build
+      - run: firebase --help
       - run: firebase deploy --token "$FIREBASE_TOKEN"

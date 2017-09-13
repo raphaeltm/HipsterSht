@@ -9,7 +9,8 @@ block content
                 h1
                     img#logo(src="/assets/hipstershit.png" alt="Hipster Shit Logo")
                 //h1=center_stage
-                #description!=description
+                #description
+                    #description-inner!=description
             #links
                 each link in links
                     a.link(href=link.link_url.url)
